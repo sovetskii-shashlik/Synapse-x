@@ -1,3 +1,4 @@
+
 pcall(function() game.CoreGui["Synapse X"]:Destroy() end)
 
 local SynapseXreal = Instance.new("ScreenGui")
@@ -117,6 +118,7 @@ Mini.Font = Enum.Font.Arial
 Mini.Text = "_"
 Mini.TextColor3 = Color3.fromRGB(255, 255, 255)
 Mini.TextSize = 14.000
+Mini.MouseButton1Click:Connect(function()
     synminbutt.Visible = true
     MainFrame.Visible = false
 end)
@@ -134,11 +136,6 @@ Min.Text = "M"
 Min.TextColor3 = Color3.fromRGB(255, 255, 255)
 Min.TextSize = 14.000
 Min.MouseButton1Click:Connect(function()
-    game.StarterGui:SetCore("SendNotification", {
-        Title = "Synapse X";
-        Text = "Synapse X hide. Press F6 to back.";
-        Duration = 2;
-    })
     MainFrame.Visible = false
     synminbutt.Visible = false
 end)
